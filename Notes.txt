@@ -1,0 +1,30 @@
+DevOps 
+- Building 
+- testing 
+- releasing 
+- automation (deployment - monitoring - infrastructure )
+
+- Pipe line: automated workflow (assembly line) that moves code from development to production 		by  automating build, test, and deployment stages.
+
+DevOps job is to write these pipelines - tools (GitHub actions, GitLapCI, Jenkins)
+
+
+- CI: continuous integration - auth test run when code pushed
+- CD: continuous deployment - auto deploy to production when test pass
+
+- Kubernetes: platform for automating deployment, scaling and managing containerized 			applications.
+
+
+
+_____________________ git _______________________
+
+- git: version management system and distributer.
+
+- git config --global user.name ''
+- git config --global user.email ''
+- git log
+- git status
+_____________________ command line _______________________
+
+( ): 
+
