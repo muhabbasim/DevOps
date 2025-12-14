@@ -22,8 +22,22 @@ _____________________ git _______________________
 
 - git config --global user.name ''
 - git config --global user.email ''
+
+- git remote add origin remoteRepoURl
+- git push -u origin main
+
 - git log
 - git status
+
+
+branching ##############
+
+- git branch branchName 
+- git checkout branchName
+- git checkout -b branchName => create & checkout  
+- git checkout -f branchName => (-f) discard changes on the detached head
+- git branch branchName sourceName => make branch from another branch without been the head 
+
 _____________________ command line _______________________
 
 ( ): 
