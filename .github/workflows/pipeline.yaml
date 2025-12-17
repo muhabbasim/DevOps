@@ -1,0 +1,25 @@
+name: CI pipeline
+
+on: 
+  push:
+  # only take action when push to the main branch
+    branches: [ main ]
+  # groub of steps run together
+jobs: 
+  build: # job name
+    runs-on: uboutu-latest
+    # set sequential steps to excute 
+    steps: 
+      - name: Checkout code # step name
+        uses: actions/checkout@v3 # use prebuid git action
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v3 # use prebuid git action
+        with:
+            noede-version: 16
+
+      - name: Install dependencies
+        run: npm Install
+
+      - name: Run test
+        run: npm test

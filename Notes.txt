@@ -22,23 +22,50 @@ _____________________ git _______________________
 
 - git config --global user.name ''
 - git config --global user.email ''
-
-- git remote add origin remoteRepoURl
-- git push -u origin main
-
 - git log
 - git status
 
+- git remote add origin remoteRepoURl
+- git push -u origin main
+- git push --set-upstream origin branchName ==> same as git push -u origin main 
 
-branching ##############
-
+branching 
 - git branch branchName 
-- git checkout branchName
-- git checkout -b branchName => create & checkout  
+- git checkout branch
 - git checkout -f branchName => (-f) discard changes on the detached head
-- git branch branchName sourceName => make branch from another branch without been the head 
+- git checkout -b branchName => create & checkout  
+- git pull ==> fetches changes from remote repo
 
-_____________________ command line _______________________
+_____________________ CI/CD Pipelines _______________________
+tools: Jenkins, GitLapCI, CircleCI, Azure DevOps, GitHub actions
 
-( ): 
+GitHub pipelines actions: workflow
+Yaml: 
+  - Stand for: YAML Ain't Markup Language
+  - Data format used to store and organize information for configeration.
+  - Whitespace-sensetive, 
+  Not Allowed: 
+  - indentation
+  Allwoed:
+  - List, Nested structure Scalars(strings,numbers, booleans)
+
+  Keywords:
+  name: define workflow or job title
+
+  on: define triggers (push, PR, schedule)
+
+  jobs: define jobs, their os and steps.
+
+  steps: sequential conmmands or actions.
+
+  run: shell command to excute.
+
+  uses: use prebuild actions.
+
+  with: pass params to actions.
+
+  env: set environment variables.
+
+  needs: make one job depend on another
+
 
