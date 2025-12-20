@@ -1,0 +1,90 @@
+DevOps 
+- Building 
+- testing 
+- releasing 
+- automation (deployment - monitoring - infrastructure )
+
+- Pipe line: automated workflow (assembly line) that moves code from development to production 		by  automating build, test, and deployment stages.
+
+DevOps job is to write these pipelines - tools (GitHub actions, GitLapCI, Jenkins)
+
+
+- CI: continuous integration - auth test run when code pushed
+- CD: continuous deployment - auto deploy to production when test pass
+
+- Kubernetes: platform for automating deployment, scaling and managing containerized 			applications.
+
+
+
+_____________________ git _______________________
+
+- git: version management system and distributer.
+
+- git config --global user.name ''
+- git config --global user.email ''
+- git log
+- git status
+
+- git remote add origin remoteRepoURl
+- git push -u origin main
+- git push --set-upstream origin branchName ==> same as git push -u origin main 
+
+branching 
+- git branch branchName 
+- git checkout branch
+- git checkout -f branchName => (-f) discard changes on the detached head
+- git checkout -b branchName => create & checkout  
+- git pull ==> fetches changes from remote repo
+
+_____________________ CI/CD Pipelines _______________________
+
+tools: Jenkins, GitLapCI, CircleCI, Azure DevOps, GitHub actions
+
+GitHub pipelines actions: workflow
+Yaml: 
+  - Stand for: YAML Ain't Markup Language
+  - Data format used to store and organize information for configeration.
+  - Whitespace-sensetive, 
+  Not Allowed: 
+  - indentation
+  Allwoed:
+  - List, Nested structure Scalars(strings,numbers, booleans)
+
+  Keywords:
+  name: define workflow or job title
+
+  on: define triggers (push, PR, schedule)
+
+  jobs: define jobs, their os and steps.
+
+  steps: sequential conmmands or actions.
+
+  run: shell command to excute.
+
+  uses: use prebuild actions.
+
+  with: pass params to actions.
+
+  env: set environment variables.
+
+  needs: make one job depend on another
+
+
+_____________________ Docker _______________________
+
+Images: standalone excutable package that inclueds everything needed to run a software 
+Containers: execution environment
+Volumes: persistent data storage mechanism, allows data to be shared between a container and host (computer, server)
+Network: communication channel that enable containers to communicate 
+
+commands: 
+  (FROM): base image to use
+  (WORKDIR): sets the working directory
+  (COPY): copies the files 
+  (RUN): excute commands in the shell
+  (EXPOSE): inform  docker that container will listen to specific network ports at runtime
+  (ENV): sets environment variables during image build
+  (ARG): define build time variables 
+  (VOLUME): creates a mount points for externally mounted volumes
+  (CMD): provide defualt command to excute when the container starts
+  (ENTRYPOINT): specify default excutable to be run when container starts
