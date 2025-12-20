@@ -1,22 +1,22 @@
-name: CI pipeline
+name: CI pipeline # Action name
 
-on: 
+on: # Trigger on
   push:
   # only take action when push to the main branch
     branches: [ main ]
-  # groub of steps run together
+  # group of steps run together
 jobs: 
-  build: # job name
-    runs-on: ubuntu-latest
+  build: # First job
+    runs-on: ubuntu-latest # the virtual machine environment
     # set sequential steps to excute 
     steps: 
       - name: Checkout code # step name
-        uses: actions/checkout@v5 # use prebuid git action
+        uses: actions/checkout@v5 # # its prebuid git action, download repository code to the virtual machine
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v3 # use prebuid git action
+      - name: Set up Node.js 
+        uses: actions/setup-node@v3 # its prebuid git action, Installs Node.js runtime
         with:
-          node-version: 16
+          node-version: 16 # Parameters: Configures it to use Node.js version 16
 
       - name: Install dependencies
         run: npm install
